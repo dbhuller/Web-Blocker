@@ -3,7 +3,8 @@ import time
 from datetime import datetime as dt
 
 # host file path: C:\Windows\System32\drivers\etc
-host_path = 'C:\Windows\System32\drivers\etc\hosts'
+#host_path = 'C:\Windows\System32\drivers\etc\hosts'
+host_test = 'hosts_test'
 redirect = '127.0.0.1'
 website_list = ['www.facebook.com', 'facebook.com', 'www.instagram.com', 'instagram.com']
 

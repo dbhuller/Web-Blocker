@@ -10,7 +10,7 @@ website_list = ['www.facebook.com', 'facebook.com', 'www.instagram.com', 'instag
 
 while True:
     #check time
-    if dt(dt.now().year, dt.now().month, dt.now().day, 8) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day, 20):
+    if dt(dt.now().year, dt.now().month, dt.now().day, 16) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day, 17):
         print('Working Hours')
         #reading and printing the file
         with open(host_test, 'r+') as file:

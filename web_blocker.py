@@ -10,7 +10,7 @@ website_list = ['www.facebook.com', 'facebook.com', 'www.instagram.com', 'instag
 
 while True:
     #check time
-    if dt(dt.now().year, dt.now().month, dt.now().day, 8) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day, 17):
+    if dt(dt.now().year, dt.now().month, dt.now().day, 8) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day, 20):
         print('Working Hours')
         #reading and printing the file
         with open(host_test, 'r+') as file:
@@ -21,5 +21,12 @@ while True:
                 else:
                     file.write(redirect + ' ' + site+'\n')
     else:
+        with open(host_test,'r+') as file:
+            content = file.readlines()
+            file.seek(0)
+            for line in content:
+                if not any(site in line for site in website_list):
+                    file.write(line)
+            file.truncate()
         print('Non-Working Hours')    
     time.sleep(5)
